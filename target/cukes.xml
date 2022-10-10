@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="3" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="13" time="312.49">
+<testcase classname="User could register with valid data" name="user Register successfully" time="60.808">
+<system-out><![CDATA[Given user go to registration page..........................................passed
+When user enter "Noha" and "Essam" and "noha.essam@gmail.com" and "170389" and "170389".passed
+And user clicks on register button..........................................passed
+Then user could register successfully.......................................passed
+And return to homepage......................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User could log in with valid email and password" name="user login successfully" time="21.507">
+<system-out><![CDATA[Given user navigates login page.............................................passed
+When user login with "noha.essam@gmail.com" and "170389"....................passed
+And user click on login button..............................................passed
+Then user could login successfully..........................................passed
+And redirected to homepage..................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User could log in with valid email and password" name="user couldn't login successfully" time="14.38">
+<system-out><![CDATA[Given user navigates login page.............................................passed
+When user login with "wrong@gmai.com" and "170389"..........................passed
+And user click on login button..............................................passed
+Then user could not login successfully......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="switching between currencies US-Euro" name="Logged User could switch between currencies US-Euro" time="22.859">
+<system-out><![CDATA[Given user could logged by "noha.essam@gmail.com" and "170389"..............passed
+Given user writes Product name "Apple MacBook"..............................passed
+Given user click on search button...........................................passed
+Then the system change the system currency..................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User could search for any product" name="Logged User could search for any product" time="21.421">
+<system-out><![CDATA[Given user could login by "noha.essam@gmail.com" and "170389"...............passed
+Given user writes Product name "apple"......................................passed
+When user click on search button............................................passed
+Then the system show related product that include "Apple"...................passed
+]]></system-out>
+</testcase>
+<testcase classname="the Logged user could select any different Categories in the system" name="Logged user could select different Categories" time="22.147">
+<system-out><![CDATA[Given user could login by "noha.essam@gmail.com" and "170389"...............passed
+When user can hover on computer category and selects sub category notebook..passed
+Then the system show all sub category products..............................passed
+]]></system-out>
+</testcase>
+<testcase classname="The links on slider page should working" name="The links on slider page should working" time="13.82">
+<failure message="expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[Given User in home page and click on  "first"...............................passed
+Then user verify that "https://demo.nopcommerce.com/nokia-lumia-1020" for Slider correct.failed
+
+StackTrace:
+java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at org.testng.Assert.assertTrue(Assert.java:66)
+	at org.example.stepDefs.D06_HomeSlidersStepDef.user_verify_that_something_for_slider_correct(D06_HomeSlidersStepDef.java:29)
+	at ✽.user verify that "https://demo.nopcommerce.com/nokia-lumia-1020" for Slider correct(file:///C:/Users/Noha%20Essam/IdeaProjects/WebDemoNopCommerce_Automation/src/main/resources/features/F06_homeSlider.feature:7)
+]]></failure>
+</testcase>
+<testcase classname="The links on slider page should working" name="The links on slider page should working 2" time="13.215">
+<failure message="expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[Given User in home page and click on  "second"..............................passed
+Then user verify that "https://demo.nopcommerce.com/iphone-6" for Slider correct.failed
+
+StackTrace:
+java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at org.testng.Assert.assertTrue(Assert.java:66)
+	at org.example.stepDefs.D06_HomeSlidersStepDef.user_verify_that_something_for_slider_correct(D06_HomeSlidersStepDef.java:29)
+	at ✽.user verify that "https://demo.nopcommerce.com/iphone-6" for Slider correct(file:///C:/Users/Noha%20Essam/IdeaProjects/WebDemoNopCommerce_Automation/src/main/resources/features/F06_homeSlider.feature:7)
+]]></failure>
+</testcase>
+<testcase classname="the User can follow us on different Social media" name="the Social media links should be working" time="59.368">
+<system-out><![CDATA[Given User in home page and click on  "Facebook" Icon.......................passed
+Then user verify that "https://www.facebook.com/nopCommerce" for every social correct.passed
+]]></system-out>
+</testcase>
+<testcase classname="the User can follow us on different Social media" name="the Social media links should be working 2" time="20.202">
+<system-out><![CDATA[Given User in home page and click on  "Twitter" Icon........................passed
+Then user verify that "https://twitter.com/nopCommerce" for every social correct.passed
+]]></system-out>
+</testcase>
+<testcase classname="the User can follow us on different Social media" name="the Social media links should be working 3" time="19.146">
+<system-out><![CDATA[Given User in home page and click on  "Youtube" Icon........................passed
+Then user verify that "https://www.youtube.com/user/nopCommerce" for every social correct.passed
+]]></system-out>
+</testcase>
+<testcase classname="the User can follow us on different Social media" name="the Social media links should be working 4" time="13.142">
+<failure message="expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[Given User in home page and click on  "RSS" Icon............................passed
+Then user verify that "https://www.rss.com/user/nopCommerce" for every social correct.failed
+
+StackTrace:
+java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:976)
+	at org.testng.Assert.assertEquals(Assert.java:1010)
+	at org.example.stepDefs.D07_FollowUsStepDef.user_verify_that_something_for_every_social_correct(D07_FollowUsStepDef.java:44)
+	at ✽.user verify that "https://www.rss.com/user/nopCommerce" for every social correct(file:///C:/Users/Noha%20Essam/IdeaProjects/WebDemoNopCommerce_Automation/src/main/resources/features/F07_FollowUs.feature:7)
+]]></failure>
+</testcase>
+<testcase classname="Logged user could add different products to Wishlist" name="Logged user could add different products to Wishlist" time="10.093">
+<system-out><![CDATA[Given User in homepage and add product to his wishlist......................passed
+And the system show green success message...................................passed
+When user go to his Wishlist................................................passed
+Then The User find Product "HTC One M8 Android L 5.0 Lollipop" in the Wishlist.passed
+]]></system-out>
+</testcase>
+</testsuite>
